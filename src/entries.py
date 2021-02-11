@@ -3,7 +3,7 @@ import csv
 def enter_team():
   print("\nYou have selected to enter a team.\n")
 
-print("The teams currently entered into the tournament are:")
+  print("The teams currently entered into the tournament are:")
 
   with open('src/teams.csv','r') as f:
     all_teams = f.read().splitlines()
@@ -13,7 +13,7 @@ print("The teams currently entered into the tournament are:")
 
   while True:
     team_name = input("What is the team name you would like to enter? ")
-    team_size = input("How many people are in your team? ")
+    team_size = int(input("How many people are in your team? "))
     team_members = [] # Initialise (set up to be ready) the list
   
     for team_member in range(1,team_size+1): # Add one to top of range
@@ -21,11 +21,11 @@ print("The teams currently entered into the tournament are:")
 
     with open('src/teams.csv','a') as f:
       writer = csv.writer(f)
-      writer.writerow(team_name)
+      writer.writerow([team_name])
 
     all_teams.append(team_name)
 
-    anotherteam = input("Do you want to enter another team? (Y/N) ")
+    another_team = input("Do you want to enter another team? (Y/N) ")
     if another_team != 'Y':
       break
   
