@@ -8,11 +8,11 @@ def enter_team_score():
   team_one_score = int(input("Team 1 score: "))
   team_two_score = int(input("Team 2 score: ")) 
 
-  with open('src/results.csv','a') as f:
+  with open('src/team_results.csv','a') as f:
       writer = csv.writer(f)
       writer.writerow([team_one,team_one_score,team_two_score,team_two])      
 
-  df = pandas.read_csv('src/table.csv')
+  df = pandas.read_csv('src/team_table.csv')
 
   if team_one_score > team_two_score:
     print(f"{team_one} beat {team_two}. Score: {team_one_score} vs {team_two_score}")
@@ -31,7 +31,7 @@ def enter_team_score():
     df.loc[df['Team'] == team_one,'Points'] += 1
     df.loc[df['Team'] == team_two,'Points'] += 1
 
-  df.to_csv('src/table.csv',index=False)
+  df.to_csv('src/team_table.csv',index=False)
 
 def enter_individual_score():
   

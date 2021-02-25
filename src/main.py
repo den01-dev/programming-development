@@ -16,7 +16,7 @@ def main():
 
 def run_team():
 
-  print("What would you like to do?\n\n[1] Make an entry\n\n[2] Enter a score \n\n[3] View results\n\n[4] View table\n\n")
+  print("\nWhat would you like to do?\n\n[1] Make an entry\n\n[2] Enter a score \n\n[3] View results\n\n[4] View table\n\n")
 
   run_type = int(input("Enter selection: "))
 
@@ -32,7 +32,7 @@ def run_team():
     print("Sorry, I didn't quite catch that!")
 
 def run_individual():
-  
+
   print("This function isn't set up yet!")
 
 if __name__ == '__main__':
