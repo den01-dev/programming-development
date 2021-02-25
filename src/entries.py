@@ -22,6 +22,10 @@ def enter_team():
     with open('src/teams.csv','a') as f:
       writer = csv.writer(f)
       writer.writerow([team_name])
+    
+    with open('src/table.csv','a') as f:
+      writer = csv.writer(f)
+      writer.writerow([team_name,0,0,0,0])
 
     all_teams.append(team_name)
 

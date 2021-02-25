@@ -1,9 +1,9 @@
 from entries import enter_team, enter_individual
 from scores import enter_team_score, enter_individual_score
-from results import view_results
+from results import view_results, view_table
 
 def main():
-  print("What would you like to do?\n\n[1] Enter a team\n\n[2] Enter an individual\n\n[3] Enter a team score\n\n[4] Enter an individual score\n\n[5] View results\n\n")
+  print("What would you like to do?\n\n[1] Enter a team\n\n[2] Enter an individual\n\n[3] Enter a team score\n\n[4] Enter an individual score\n\n[5] View all results\n\n[6] View table\n\n")
 
   run_type = int(input("Enter selection: "))
 
@@ -17,6 +17,8 @@ def main():
     enter_individual_score()
   elif run_type == 5:
     view_results() 
+  elif run_type == 6:
+    view_table() 
   else:
     print("Sorry, I didn't quite catch that!")
 

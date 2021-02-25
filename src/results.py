@@ -1,2 +1,11 @@
 def view_results():
-  print("This function hasn't been set up yet!")
+
+  with open('src/results.csv','r') as f:
+    all_results = f.read().splitlines()
+    print(all_results)
+
+def view_table():
+
+  with open('src/table.csv','r') as f:
+    full_table = f.read().splitlines()
+    print(full_table)
