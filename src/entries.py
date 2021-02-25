@@ -1,15 +1,11 @@
 import csv
 
 def enter_team():
-  print("\nYou have selected to enter a team.\n")
 
-  print("The teams currently entered into the tournament are:")
-
-  with open('src/teams.csv','r') as f:
+  with open('src/teams.csv','r') as f:    
     all_teams = f.read().splitlines()
-    print(all_teams)
-    
-  print()
+    if not all_teams:
+      print(f"The teams currently entered into the tournament are:\n {all_teams}\n")
 
   while True:
     team_name = input("What is the team name you would like to enter? ")
@@ -21,9 +17,9 @@ def enter_team():
 
     with open('src/teams.csv','a') as f:
       writer = csv.writer(f)
-      writer.writerow([team_name])
+      writer.writerow([team_name,team_members])
     
-    with open('src/table.csv','a') as f:
+    with open('src/team_table.csv','a') as f:
       writer = csv.writer(f)
       writer.writerow([team_name,0,0,0,0])
 
@@ -37,4 +33,5 @@ def enter_team():
   print(all_teams)
 
 def enter_individual():
+
   print("This function hasn't been set up yet!")

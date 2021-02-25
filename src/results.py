@@ -1,11 +1,19 @@
-def view_results():
+def view_team_results():
 
-  with open('src/results.csv','r') as f:
-    all_results = f.read().splitlines()
-    print(all_results)
+  with open('src/team_results.csv','r') as f:
+    team_results = f.read().splitlines()
+    print(team_results)
 
-def view_table():
+def view_team_table():
 
-  with open('src/table.csv','r') as f:
-    full_table = f.read().splitlines()
-    print(full_table)
+  with open('src/team_table.csv','r') as f:
+    team_table = f.read().splitlines()
+    print(team_table)    
+
+def view_individual_results():
+
+  print("This function hasn't been set up yet!")
+
+def view_individual_table():
+
+  print("This function hasn't been set up yet!")
